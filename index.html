@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+  <div class="container">
+      <div class="py-5">
+          <h3>Bookmarker
+          </h3>
+      </div>
+       <hr>
+       <div class="row">
+          <div class="col-sm-12 bg-gr py-5">
+                <div class="text-center">
+                    <h2>Bookmark your favorite sites
+                    </h2>
+                     <label for="" class="bold">Site Name</label>
+                     <input type="text" placeholder="Bookmark Name" class="form-control my-2 w-75 m-auto" id="SiteName">
+                     <label for="" class="bold">Site URL</label>
+                     <input type="text" placeholder="Website URL" class="form-control my-2 w-75 m-auto" id="SiteURL">
+                     
+                     <div id="alertName" class="alert d-none w-75 m-auto alert-danger" role="alert">
+                            <strong>please use a valid URL...........
+                            </strong>
+                     
+                     </div>
+                     
+                     <button class="btn btn-primary my-2" onclick="add()">Submit</button>
+                </div>
+          </div>
+       </div>
+       <table class="table">
+           <tbody id="tableData" class="text-center">
+
+           </tbody>
+       </table>
+       <hr>
+  </div>
+
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+
+
+</html>
