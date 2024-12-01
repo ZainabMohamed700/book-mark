@@ -3,6 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* الوضع العادي */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* الوضع الداكن */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* تعديل الأزرار والعناصر */
+button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme .btn {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-theme .form-control {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-theme .alert {
+    background-color: #444;
+    color: #fff;
+    border-color: #555;
+}
+
 
 h3{
     color: darkgrey;
