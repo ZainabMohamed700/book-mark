@@ -90,5 +90,25 @@ function validateForm(){
 }
 
 SiteURL.addEventListener('blur' , validateForm)
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// تحقق من الإعداد المحفوظ
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-theme');
+    themeToggle.textContent = 'Switch to Light Mode';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    const isDark = body.classList.contains('dark-theme');
+    
+    // تغيير النص في الزر
+    themeToggle.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    
+    // حفظ الإعداد في localStorage
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
 
 
