@@ -3,42 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* الوضع الداكن */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
 /* زر دائري */
 .theme-toggle {
-    width: 60px; /* عرض الزر */
-    height: 60px; /* ارتفاع الزر */
-    background-color: #f9c74f; /* لون الشمس */
+    width: 60px;
+    height: 60px;
+    background-color: #f9c74f;
     border: none;
-    border-radius: 50%; /* جعله دائريًا */
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
-    transition: all 0.3s ease; /* تأثير السلاسة */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: absolute; /* لجعله قابلاً للتنسيق في الصفحة */
+    top: 12%; /* تعديل المسافة العمودية */
+    left: 50%; /* في منتصف العرض */
+    transform: translate(-50%, -50%); /* لضبط الإزاحة بحيث يصبح في المنتصف تمامًا */
+   
+
 }
 
-/* التأثير عند التمرير */
 .theme-toggle:hover {
-    transform: scale(1.1); /* تكبير خفيف */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* زيادة الظل */
+    transform: translate(-50%, -50%) scale(1.1); /* تكبير عند التمرير */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* لون الوضع الداكن */
 body.dark-theme .theme-toggle {
-    background-color: #4a4e69; /* لون القمر */
+    background-color: #4a4e69;
 }
 
-/* أيقونة داخل الزر */
 .theme-toggle i {
-    font-size: 24px; /* حجم الأيقونة */
-    color: white; /* لون الأيقونة */
+    font-size: 24px;
+    color: white;
     transition: transform 0.3s ease;
 }
 
-/* التأثير عند التبديل */
 body.dark-theme .theme-toggle i {
-    transform: rotate(180deg); /* دوران الأيقونة */
+    transform: rotate(180deg);
 }
 
 
@@ -55,3 +68,4 @@ h3{
 .bold{
     font-weight: 900;
 }
+
