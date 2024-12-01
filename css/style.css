@@ -3,37 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* زر بأناقة مع تأثير تمرير */
-#themeToggle {
-    background: linear-gradient(45deg, #6a11cb, #2575fc); /* تدرج لوني */
-    color: #fff;
+/* زر دائري */
+.theme-toggle {
+    width: 60px; /* عرض الزر */
+    height: 60px; /* ارتفاع الزر */
+    background-color: #f9c74f; /* لون الشمس */
     border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 25px; /* زوايا مستديرة */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    border-radius: 50%; /* جعله دائريًا */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
     transition: all 0.3s ease; /* تأثير السلاسة */
 }
 
 /* التأثير عند التمرير */
-#themeToggle:hover {
+.theme-toggle:hover {
     transform: scale(1.1); /* تكبير خفيف */
-    background: linear-gradient(45deg, #2575fc, #6a11cb); /* عكس التدرج */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* زيادة الظل */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* زيادة الظل */
 }
 
-/* تكييف الزر مع الوضع الداكن */
-body.dark-theme #themeToggle {
-    background: linear-gradient(45deg, #333, #444);
-    color: #fff;
+/* لون الوضع الداكن */
+body.dark-theme .theme-toggle {
+    background-color: #4a4e69; /* لون القمر */
 }
 
-body.dark-theme #themeToggle:hover {
-    background: linear-gradient(45deg, #444, #333);
-    box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.3);
+/* أيقونة داخل الزر */
+.theme-toggle i {
+    font-size: 24px; /* حجم الأيقونة */
+    color: white; /* لون الأيقونة */
+    transition: transform 0.3s ease;
 }
+
+/* التأثير عند التبديل */
+body.dark-theme .theme-toggle i {
+    transform: rotate(180deg); /* دوران الأيقونة */
+}
+
 
 
 
