@@ -3,41 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* الوضع العادي */
-body {
-    background-color: #ffffff;
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* الوضع الداكن */
-body.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* تعديل الأزرار والعناصر */
-button {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-theme .btn {
-    background-color: #333;
+/* زر بأناقة مع تأثير تمرير */
+#themeToggle {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* تدرج لوني */
     color: #fff;
-    border-color: #444;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px; /* زوايا مستديرة */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+    cursor: pointer;
+    transition: all 0.3s ease; /* تأثير السلاسة */
 }
 
-body.dark-theme .form-control {
-    background-color: #333;
-    color: #fff;
-    border-color: #444;
+/* التأثير عند التمرير */
+#themeToggle:hover {
+    transform: scale(1.1); /* تكبير خفيف */
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* عكس التدرج */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* زيادة الظل */
 }
 
-body.dark-theme .alert {
-    background-color: #444;
+/* تكييف الزر مع الوضع الداكن */
+body.dark-theme #themeToggle {
+    background: linear-gradient(45deg, #333, #444);
     color: #fff;
-    border-color: #555;
 }
+
+body.dark-theme #themeToggle:hover {
+    background: linear-gradient(45deg, #444, #333);
+    box-shadow: 0px 6px 8px rgba(255, 255, 255, 0.3);
+}
+
 
 
 h3{
