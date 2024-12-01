@@ -90,25 +90,29 @@ function validateForm(){
 }
 
 SiteURL.addEventListener('blur' , validateForm)
+
+
 const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
 const body = document.body;
 
-// تحقق من الإعداد المحفوظ
+// تحقق من الوضع المحفوظ
 if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-theme');
-    themeToggle.textContent = 'Switch to Light Mode';
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
 }
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
     const isDark = body.classList.contains('dark-theme');
-    
-    // تغيير النص في الزر
-    themeToggle.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    
-    // حفظ الإعداد في localStorage
+
+    // تغيير الأيقونة
+    if (isDark) {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    } else {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // حفظ الإعداد
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
-
-
-
